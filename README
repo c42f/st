@@ -1,3 +1,6 @@
+Personal fork of http://st.suckless.org/, incorporating personal config.h
+(which is likely suckful) + several useful patches.
+
 st - simple terminal
 --------------------
 st is a simple terminal emulator for X which sucks less.
