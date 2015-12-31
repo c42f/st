@@ -3160,10 +3160,13 @@ tresize(int col, int row)
 	/* resize to new height */
 	term.line = xrealloc(term.line, row * sizeof(Line));
 	term.alt  = xrealloc(term.alt,  row * sizeof(Line));
-	term.hist  = xrealloc(term.hist,  histsize * sizeof(Line));
 	term.dirty = xrealloc(term.dirty, row * sizeof(*term.dirty));
 	term.tabs = xrealloc(term.tabs, col * sizeof(*term.tabs));
 
+	if (!term.hist) {
+		term.hist  = xmalloc(histsize * sizeof(Line));
+		memset(term.hist, 0, histsize * sizeof(Line));
+	}
 	for (i = 0; i < histsize; i++) {
 		term.hist[i] = xrealloc(term.hist[i], col * sizeof(Glyph));
 		for (j = mincol; j < col; j++) {
