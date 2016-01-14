@@ -6,10 +6,11 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // Terminus 14px... crisp as possible.  Not great for symbols though.
-static char font[] = "Terminus:weight=medium:pixelsize=14:antialias=false:autohint=true";
+static char font[] = "Terminus:pixelsize=14";
 // Monospace - good for greek symbols fonts
+//static char font[] = "Cousine:pixelsize=13:antialias=true:autohint=false:hintstyle=hintfull:hinting=true";
+//static char font[] = "Liberation Mono:pixelsize=13:antialias=true:autohint=false:hintstyle=hintmedium:hinting=true";
 // static char font[] = "Monospace:pixelsize=13:antialias=true:autohint=true";
-//static char font[] = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 static int histsize = 2000;
 
